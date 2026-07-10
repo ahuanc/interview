@@ -18,7 +18,7 @@ public class UserSerializer implements Serializer<User> {
         Long id = data.getId();
         String name = data.getName();
         int age = data.getAge();
-        int cap = 8 + name.getBytes(StandardCharsets.UTF_8).length + 4;
+        int cap = 8 + 4 + name.getBytes(StandardCharsets.UTF_8).length + 4;
         ByteBuffer byteBuffer = ByteBuffer.allocate(cap);
         byteBuffer.putLong(id);
         byteBuffer.putInt(name.getBytes(StandardCharsets.UTF_8).length);
