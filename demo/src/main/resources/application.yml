@@ -1,0 +1,4 @@
+my:
+  starter:
+    enabled: true
+    message: "Hello from Demo App!"
